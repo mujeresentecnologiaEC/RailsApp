@@ -36,6 +36,16 @@
     Imprimir con HAML
 
   %p
+    En su command line (la programa 'Terminal'), y ejecute este:
+    .code
+      rails server
+  %p
+    Ahora, en su browser, puedes visitar
+    %span.filename
+      localhost:3000
+    Para ver sus cambios a la pagina web.
+
+  %p
     Intente ahora! Vengas a
     %span.filename
       app/views/personas/_hobbies.html.haml
@@ -65,3 +75,16 @@
       persona.save!
   %p
     Entonces, hagas un refresh a la pagina web y puedes ver tus cambios arriba!
+
+  %h2
+    Otra migración
+
+  %p
+    Ahora necesitas tener un sector. Añade otra migración a 
+    %span.filename
+      db/seeds.rb
+    Para especificar su sector. Pues, hagas un cambio a 
+    %span.filename
+      app/views/personas/_sectors.html.haml
+    y hagas un refresh.
+  = render :partial => "sectors"
