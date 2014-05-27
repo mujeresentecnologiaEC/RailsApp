@@ -11,4 +11,10 @@ describe Persona do
   		persona = Persona.new(name: "C", hobbies_id: hobby.id)
   		Hobby.find_by_id(hobby.id).should == persona.hobbies_id
   	end
+
+  	it "should have a sector" do
+  		sector = Sector.new(name: "Norte")
+  		persona = Persona.new(name: "C", sectors_id: sector.id)
+  		Sector.find_by_id(sector.id).should == persona.sectors_id
+  	end
 end
