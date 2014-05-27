@@ -52,10 +52,15 @@
     para añadir una linea con tu hobby. Utiliza la base de datos! El código desde el archivo va a estar abajo. En el archivo .haml, la logica para imprimir sus datos va a ser algo como esto (el "=" al principio de la linea significa que el código es Ruby, y Ruby no es HTML!):
     .code
       \= persona.sector
+  %p
+    Una pista: para obtener algo en un archivo .haml sin imprimiendo, utilize un guión:
+    .code
+      \- persona = Persona.find_by_name("rebecca")
+
   = render :partial => "hobbies"
 
   %h2
-    Migraciones
+    Seeds
 
   %p
     Es posible que no te guste tu hobby. En el archivo:
@@ -63,7 +68,7 @@
       db/seeds.rb
 
   %p
-    Puedes escribir una migración para cambiarlo. Primeramente, recuerda que necesitas encontrar tu nombre:
+    Puedes escribir un seed para cambiarlo. Primeramente, recuerda que necesitas encontrar tu nombre:
     .code
       persona = Persona.find_by_name("Rebecca")
   %p
@@ -78,10 +83,10 @@
     Entonces, haz un refresh a la pagina web y puedes ver tus cambios arriba!
 
   %h2
-    Otra migración
+    Otro Seed
 
   %p
-    Ahora necesitas tener un sector. Añade otra migración a 
+    Ahora necesitas tener un sector. Añade otro seed a 
     %span.filename
       db/seeds.rb
     Para especificar tu sector. Debes hacer un cambio a 
