@@ -9,18 +9,18 @@
     Esta es la applicación que vamos a usar hoy.
 
   %h2
-    Aceder la Base de Datos
+    Aceder a la Base de Datos
 
   %p
-    En la base de datos de esta applicación hay un table que se llama
+    En la base de datos de esta applicación hay una tabla que se llama
     .code
       persona
   %p
-    Puedes aceder tus datos desde este table. Por ejemplo, puedes buscar por un persona:
+    Puedes acceder a tus datos desde esta tabla. Por ejemplo, puedes buscar una persona por su nombre:
     .code
       Persona.find_by_name("Rebecca")
   %p
-    El clase persona tiene muchas metódos. Si tienes un objeto que es una Persona:
+    La clase persona tiene muchos metódos. Si tienes un objeto que es una Persona:
     .code
       persona = Persona.find_by_name("Rebecca")
   %p
@@ -36,44 +36,46 @@
     Imprimir con HAML
 
   %p
-    En su command line (la programa 'Terminal'), y ejecute este:
+    En tu command line (el programa 'Terminal'), ejecuta esta linea dentro del directorio de la aplicación:
     .code
       rails server
   %p
-    Ahora, en su browser, puedes visitar
+    Ahora, en tu browser, puedes visitar
     %span.filename
       localhost:3000
     Para ver sus cambios a la pagina web.
 
   %p
-    Intente ahora! Vengas a
+    Intentalo ahora! Dirígete a
     %span.filename
       app/views/personas/_hobbies.html.haml
-    para añadir una linea con su hobby. Utiliza la base de datos! El código desde el archivo va a estar abajo. En el archivo .haml, la logica para imprimir sus datos va a estar algo cómo esto (el "=" significa que el código antes es Ruby, y Ruby no es HTML!):
+    para añadir una linea con tu hobby. Utiliza la base de datos! El código desde el archivo va a estar abajo. En el archivo .haml, la logica para imprimir sus datos va a ser algo como esto (el "=" al principio de la linea significa que el código es Ruby, y Ruby no es HTML!):
     .code
       \= persona.sector
   = render :partial => "hobbies"
 
   %h2
-    Las migraciones
+    Migraciones
 
   %p
-    Es posible que no te gusta tu hobby. En el archivo
+    Es posible que no te guste tu hobby. En el archivo:
     %span.filename
       db/seeds.rb
-    puedes escribir una migración para cambiarle. Primermente, recuerde que necesitas encontrar su nombre:
+
+  %p
+    Puedes escribir una migración para cambiarlo. Primeramente, recuerda que necesitas encontrar tu nombre:
     .code
       persona = Persona.find_by_name("Rebecca")
   %p
-    Pues, puedes asignar su hobby:
+    Ahora, puedes asignar tu hobby:
     .code
-      persona.hobby = "Corriendo"
+      persona.hobby = "Correr"
   %p
-    Finalmente, necesitas hacer un "save" al base de datos.
+    Finalmente, necesitas hacer un "save" a la base de datos.
     .code
       persona.save!
   %p
-    Entonces, hagas un refresh a la pagina web y puedes ver tus cambios arriba!
+    Entonces, haz un refresh a la pagina web y puedes ver tus cambios arriba!
 
   %h2
     Otra migración
@@ -82,8 +84,8 @@
     Ahora necesitas tener un sector. Añade otra migración a 
     %span.filename
       db/seeds.rb
-    para especificar su sector. Pues, hagas un cambio a 
+    Para especificar tu sector. Debes hacer un cambio a 
     %span.filename
       app/views/personas/_sectors.html.haml
-    y hagas un refresh.
+    y hacer un refresh.
   = render :partial => "sectors"
