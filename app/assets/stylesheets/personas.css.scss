@@ -1,0 +1,48 @@
+// Place all the styles related to the Personas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: Arial;
+  font-size: 12px;
+  background-color: #AB89C7;
+
+  h1, h2 {
+    color: #FF3300;
+    font-weight: bold;
+    font-family: Times;
+  }
+
+  .tutorial {
+    margin: auto;
+    width: 60%;
+    max-width: 750px;
+    text-align: justify;
+    background-color: white;
+    padding: 10px;
+    height: 100%;
+    min-height: 1000px;
+
+    .code, .filename {
+      font-family: Consolas, "Liberation Mono", Courier, monospace;
+      font-size: 12px;
+    }
+
+    .filename {
+      color: #AB89C7;
+    }
+
+    .code {
+      margin: 0;
+      border: 1px solid #ddd;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+      padding: 5px;
+    }
+
+    .hobbies {
+      min-height: 100px;
+      padding: 0px 20px;
+    }
+  }
+}

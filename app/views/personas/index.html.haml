@@ -1,0 +1,61 @@
+.tutorial
+  %h1
+    Taller de Rails al Lado del Cliente
+
+  %h2
+    Introducción
+
+  %p
+    Esta es la applicación que vamos a usar hoy.
+
+  %h2
+    El Base de Datos
+
+  %p
+    En el base de datos de esta applicación hay un table que se llama
+    .code
+      persona
+  %p
+    Puedes aceder tus datos desde este table. Por ejemplo, puedes buscar por un persona:
+    .code
+      Persona.find_by_name("Rebecca")
+  %p
+    El clase persona tiene muchas metódos. Si tienes un objeto que es una Persona:
+    .code
+      persona = Persona.find_by_name("Rebecca")
+  %p
+    Puedes llamar este método:
+    .code
+      persona.hobby
+  %p
+    Para obtener su hobby, o:
+    .code
+      persona.sector
+  %p
+    Para obtener su sector. Intente ahora! Vengas a
+    %span.filename
+      app/views/layouts/personas_hobbies.html.haml
+    para añadir una linea con su hobby. Utiliza el base de datos! El código desde el archivo va a estar abajo.
+  = render :partial => "hobbies"
+
+  %h2
+    El Base de Datos
+
+  %p
+    Es posible que no te gusta tu hobby. En el archivo
+    %span.filename
+      db/seeds.rb
+  %p
+    Puedes escribir una migración para cambiarle. Primermente, recuerde que necesitas encontrar su nombre:
+    .code
+      persona = Persona.find_by_name("Rebecca")
+  %p
+    Pues, puedes asignar su hobby:
+    .code
+      persona.hobby = "Corriendo"
+  %p
+    Finalmente, necesitas hacer un "save" al base de datos.
+    .code
+      persona.save!
+  %p
+    Entonces, hagas un refresh a la pagina web y puedes ver tus cambios arriba!
