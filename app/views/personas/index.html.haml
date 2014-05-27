@@ -9,10 +9,10 @@
     Esta es la applicación que vamos a usar hoy.
 
   %h2
-    El Base de Datos
+    Aceder la Base de Datos
 
   %p
-    En el base de datos de esta applicación hay un table que se llama
+    En la base de datos de esta applicación hay un table que se llama
     .code
       persona
   %p
@@ -28,18 +28,24 @@
     .code
       persona.hobby
   %p
-    Para obtener su hobby, o:
+    Para obtener su hobby, o para obtener su sector:
     .code
       persona.sector
+
+  %h2
+    Imprimir con HAML
+
   %p
-    Para obtener su sector. Intente ahora! Vengas a
+    Intente ahora! Vengas a
     %span.filename
-      app/views/layouts/personas_hobbies.html.haml
-    para añadir una linea con su hobby. Utiliza el base de datos! El código desde el archivo va a estar abajo.
+      app/views/personas/_hobbies.html.haml
+    para añadir una linea con su hobby. Utiliza la base de datos! El código desde el archivo va a estar abajo. En el archivo .haml, la logica para imprimir sus datos va a estar algo cómo esto (el "=" significa que el código antes es Ruby, y Ruby no es HTML!):
+    .code
+      \= persona.sector
   = render :partial => "hobbies"
 
   %h2
-    El Base de Datos
+    Las migraciones
 
   %p
     Es posible que no te gusta tu hobby. En el archivo
