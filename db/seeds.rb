@@ -6,6 +6,7 @@ valle = Sector.create(name: "Valle")
 # Standard hobbies
 hobbies = Hobby.create([{ name: 'Leer'}, { name: 'Correr'}, { name: 'Bailar'}, { name: 'Pintar'}, { name: 'Cantar'}, { name: 'Mirar películas'} ])
 new_hobby = Hobby.create(name: "bailar SALSA")
+tomar = Hobby.create(name: "tomar")
 
 # Asistentes!
 Persona.create(name: "Rebecca", hobby: hobbies[0], sector: norte)
@@ -27,3 +28,4 @@ Persona.create(name: "Karina", hobby: hobbies[5], sector: valle)
 Persona.create(name: "Batman", hobby: hobbies[2], sector: sur)
 Persona.create(name: "Carla P", hobby: hobbies[2], sector: norte)
 Persona.create(name: "Hélène", hobby: hobbies [2], sector: norte)
+Persona.create(name: "Batichica", hobby: tomar, sector: norte)
