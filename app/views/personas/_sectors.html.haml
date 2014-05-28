@@ -8,3 +8,9 @@
     = persona.name
     y vivo al
     = persona.sector.name
+  %p
+    - adis = Persona.find_by_name("Adis")
+    mi nombre es:
+    = adis.name
+    y vivo al
+    = adis.sector.name
