@@ -37,9 +37,6 @@
     mi nombre es:
     = persona.name
     y me gusta
-<<<<<<< HEAD
-    = persona.hobby.name
-=======
     = persona.hobby.name
     %p
     - persona = Persona.find_by_name("Carla")
@@ -55,4 +52,9 @@
     y me gusta
     = persona.hobby.name
 
->>>>>>> 5a913758a6556a8d190b16224c5eb303f0dc7a75
+    %p
+    - vivi = Persona.find_by_name("Vivi")
+    mi nombre es:
+    = vivi.name
+    y me gusta
+    = vivi.hobby.name
