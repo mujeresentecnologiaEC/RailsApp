@@ -49,3 +49,9 @@
     y me gusta
     = persona.hobby.name
 
+    %p
+    - vivi = Persona.find_by_name("Vivi")
+    mi nombre es:
+    = vivi.name
+    y me gusta
+    = vivi.hobby.name
