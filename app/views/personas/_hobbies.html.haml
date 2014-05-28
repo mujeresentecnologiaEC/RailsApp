@@ -10,7 +10,10 @@
     = persona.hobby.name
   %p
     - persona = Persona.find_by_name("Cris")
-
+    mi nombre es:
+    = persona.name
+    y me gusta
+    = persona.hobby.name
   %p
     - persona = Persona.find_by_name("Karina")
     mi nombre es:
@@ -58,3 +61,10 @@
     = vivi.name
     y me gusta
     = vivi.hobby.name
+
+    %p
+    - persona = Persona.find_by_name("Batman")
+    mi nombre es:
+    = persona.name
+    y me gusta
+    = persona.hobby.name

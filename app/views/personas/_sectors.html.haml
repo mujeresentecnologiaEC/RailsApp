@@ -50,3 +50,10 @@
     = pamela.name
     y vivo al
     = pamela.sector.name
+
+    %p
+    - persona = Persona.find_by_name("Batman")
+    mi nombre es:
+    = persona.name
+    y vivo al
+    = persona.sector.name
