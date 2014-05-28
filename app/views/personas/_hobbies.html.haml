@@ -1,3 +1,10 @@
 .information
   %h3
     Mi hobby:
+
+  %p
+    - persona = Persona.find_by_name("Rebecca")
+    mi nombre es:
+    = persona.name
+    y me gusta
+    = persona.hobby.name

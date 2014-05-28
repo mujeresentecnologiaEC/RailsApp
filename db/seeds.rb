@@ -1,14 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Sectors in Quito
+sectors = Sector.create([ { name: 'Norte' }, { name: 'Sur' }, { name: 'Valle' } ])
 
-	Sector.create(name: 'Norte')
-	Sector.create(name: 'Sur')
-	Sector.create(name: 'Valle')
+# Standard hobbies
+hobbies = Hobby.create([{ name: 'Leer'}, { name: 'Correr'}, { name: 'Bailar'}, { name: 'Pintar'}, { name: 'Cantar'}, { name: 'Mirar películas'} ])
 
-	Hobby.create([{ name: 'Leer'}, { name: 'Correr'}, { name: 'Bailar'}, { name: 'Pintar'}, { name: 'Cantar'}, { name: 'Mirar películas'} ])
+# Asistentes!
+Persona.create(name: "Rebecca", hobby: hobbies[0], sector: sectors[0])
 

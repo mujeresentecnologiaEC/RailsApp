@@ -26,11 +26,11 @@
   %p
     Puedes llamar este método:
     .code
-      persona.hobby
+      persona.hobby.name
   %p
-    Para obtener su hobby, o para obtener su sector:
+    Para obtener el nombre de su hobby, o para obtener el nombre de su sector:
     .code
-      persona.sector
+      persona.sector.name
 
   %h2
     Imprimir con HAML
@@ -51,7 +51,7 @@
       app/views/personas/_hobbies.html.haml
     para añadir una linea con tu hobby. Utiliza la base de datos! El código desde el archivo va a estar abajo. En el archivo .haml, la logica para imprimir sus datos va a ser algo como esto (el "=" al principio de la linea significa que el código es Ruby, y Ruby no es HTML!):
     .code
-      \= persona.sector
+      \= persona.sector.name
   %p
     Una pista: para obtener algo en un archivo .haml sin imprimiendo, utilize un guión:
     .code
@@ -72,9 +72,13 @@
     .code
       persona = Persona.find_by_name("Rebecca")
   %p
-    Ahora, puedes asignar tu hobby:
+    Debes escribir un hobby también. Mi hobby, por ejemplo, tiene el nombre "correr":
     .code
-      persona.hobby = "Correr"
+      hobby = Hobby.new(name: "Correr")
+  %p
+    Ahora, puedes asignar tu hobby con el objeto Hobby que escribiste:
+    .code
+      persona.hobby = hobby
   %p
     Finalmente, necesitas hacer un "save" a la base de datos.
     .code
