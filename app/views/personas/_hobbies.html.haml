@@ -21,3 +21,11 @@
     y me gusta
     = adis.hobby.name
 
+  %p
+    - panchita = Persona.find_by_name("Panchita")
+    mi nombre es:
+    = panchita.name
+    y me gusta
+    = panchita.hobby.name
+
+
