@@ -13,5 +13,4 @@ Persona.create(name: "Angie", hobby: hobbies[5], sector: sectors[1])
 Persona.create(name: "Alegria", hobby: hobbies[4], sector: sectors[1])
 Persona.create(name: "Helene", hobby: hobbies[3], sector: sectors[2])
 Persona.create(name: "Andrea", hobby: hobbies[5], sector: sectors[2])
-
-
+Persona.create(name: "Cris", hobby: hobbies[4], sector: sectors[2])
