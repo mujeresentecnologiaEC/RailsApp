@@ -6,4 +6,5 @@ hobbies = Hobby.create([{ name: 'Leer'}, { name: 'Correr'}, { name: 'Bailar'}, {
 
 # Asistentes!
 Persona.create(name: "Rebecca", hobby: hobbies[0], sector: sectors[0])
+Persona.create(name: "Carla", hobby: hobbies[2], sector: sectors[2])
 
