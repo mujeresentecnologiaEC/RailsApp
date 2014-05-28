@@ -8,13 +8,13 @@ describe Persona do
 
 	it "should belong to a person" do
   		hobby = Hobby.new(name: "leer")
-  		persona = Persona.new(name: "C", hobbies_id: hobby.id)
-  		Hobby.find_by_id(hobby.id).should == persona.hobbies_id
+  		persona = Persona.new(name: "C", hobby: hobby)
+  		Hobby.find_by_id(hobby.id).should == persona.hobby_id
   	end
 
   	it "should have a sector" do
-  		sector = Sector.new(name: "Norte")
-  		persona = Persona.new(name: "C", sectors_id: sector.id)
-  		Sector.find_by_id(sector.id).should == persona.sectors_id
+  		sector = Sector.create(name: "Norte")
+  		persona = Persona.new(name: "C", sector: sector)
+  		Sector.find_by_id(sector.id).should == persona.sector
   	end
 end
