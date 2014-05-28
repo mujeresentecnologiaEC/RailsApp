@@ -4,6 +4,10 @@
 
   %h2
     Introducción
+  %p
+    Para obtener los datos, en el command line (la programa "Terminal"), ejecute:
+    .code
+      rake vamos
 
   %p
     Esta es la applicación que vamos a usar hoy.
@@ -81,6 +85,25 @@
     Finalmente, necesitas hacer un "save" a la base de datos.
     .code
       persona.save!
+  %p
+    En su command line, ejecute su seed:
+    .code
+      rake vamos
+  %p
+    Entonces, haz un refresh a la pagina web y puedes ver tus cambios arriba!
+
+  %h2
+    Otro Seed
+
+  %p
+    Ahora necesitas tener un sector. Añade otro seed a 
+    %span.filename
+      db/seeds.rb
+    Para especificar tu sector. Debes hacer un cambio a 
+    %span.filename
+      app/views/personas/_sectors.html.haml
+    y hacer un refresh.
+  = render :partial => "sectors"
   %p
     Entonces, haz un refresh a la pagina web y puedes ver tus cambios arriba!
 
