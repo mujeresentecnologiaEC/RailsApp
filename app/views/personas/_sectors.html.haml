@@ -22,3 +22,12 @@
     = panchita.name
     y vivo al
     = panchita.sector.name
+
+    %p
+    - persona = Persona.find_by_name("Carla")
+    mi nombre es:
+    = persona.name
+    y vivo al
+    = persona.sector.name
+
+
