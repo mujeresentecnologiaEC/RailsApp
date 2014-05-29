@@ -29,13 +29,10 @@ Persona.create(name: "Batman", hobby: hobbies[2], sector: sur)
 Persona.create(name: "Carla P", hobby: hobbies[2], sector: norte)
 Persona.create(name: "Hélène", hobby: hobbies [2], sector: norte)
 Persona.create(name: "Batichica", hobby: tomar, sector: norte)
-
 dormir_hobby = Hobby.create(name: "Dormir")
 rebecca = Persona.find_by_name("Rebecca")
-
 rebecca.hobby = dormir_hobby
 rebecca.save!
-
 caminar=Hobby.create(name:"Caminar bajo la lluvia")
 mony = Persona.find_by_name("Mony")
 mony.hobby=caminar
@@ -44,3 +41,11 @@ mony.save!
 diana = Persona.find_by_name("Diana")
 diana.hobby = tomar
 diana.save
+
+llegar_tarde = Hobby.create(name: "llegar tarde")
+
+helene = Persona.find_by_name ("Hélène")
+
+helene.hobby = llegar_tarde
+
+helene.save!
