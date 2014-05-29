@@ -21,7 +21,6 @@ Persona.create(name: "Mony", hobby: hobbies[3], sector: valle)
 Persona.create(name: "Cristina")
 Persona.create(name: "Angie", hobby: hobbies[5], sector: sur)
 Persona.create(name: "Alegria", hobby: hobbies[4], sector: sur)
-Persona.create(name: "Helene", hobby: hobbies[3], sector: valle)
 Persona.create(name: "Andrea", hobby: hobbies[5], sector: valle)
 Persona.create(name: "Cris", hobby: hobbies[4], sector: norte)
 Persona.create(name: "Adis", hobby: hobbies[2], sector: norte)
@@ -53,8 +52,9 @@ helene = Persona.find_by_name ("Hélène")
 
 helene.hobby = llegar_tarde
 
-helene.save!
+helene.work = "tecnica"
 
+helene.save!
 
 carlaP = Persona.find_by_name("Carla P")
 carlaP.hobby = hobby_pasear
