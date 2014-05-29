@@ -45,6 +45,7 @@ mony.save!
 
 diana = Persona.find_by_name("Diana")
 diana.hobby = tomar
+diana.work = "superheroine"
 diana.save
 
 llegar_tarde = Hobby.create(name: "llegar tarde")
