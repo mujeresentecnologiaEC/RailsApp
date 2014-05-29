@@ -29,3 +29,22 @@ Persona.create(name: "Batman", hobby: hobbies[2], sector: sur)
 Persona.create(name: "Carla P", hobby: hobbies[2], sector: norte)
 Persona.create(name: "Hélène", hobby: hobbies [2], sector: norte)
 Persona.create(name: "Batichica", hobby: tomar, sector: norte)
+
+dormir_hobby = Hobby.create(name: "Dormir")
+rebecca = Persona.find_by_name("Rebecca")
+
+rebecca.hobby = dormir_hobby
+rebecca.save!
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Changing my hobby

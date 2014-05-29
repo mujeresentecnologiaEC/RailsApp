@@ -4,10 +4,12 @@
 
   %p
     - persona = Persona.find_by_name("Rebecca")
-    mi nombre es:
+    Hola! Mi nombre es:
     = persona.name
-    y me gusta
+    y me gusta mucha
     = persona.hobby.name
+    !
+
   %p
     - persona = Persona.find_by_name("Cris")
     mi nombre es:
