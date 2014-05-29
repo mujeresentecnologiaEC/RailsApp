@@ -36,15 +36,8 @@ rebecca = Persona.find_by_name("Rebecca")
 rebecca.hobby = dormir_hobby
 rebecca.save!
 
+caminar=Hobby.create(name:"Caminar bajo la lluvia")
+mony = Persona.find_by_name("Mony")
+mony.hobby=caminar
+mony.save!
 
-
-
-
-
-
-
-
-
-
-
->>>>>>> Changing my hobby
