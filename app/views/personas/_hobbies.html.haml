@@ -90,9 +90,18 @@
     = persona.name
     y me gusta
     = persona.hobby.name
+    y mi trabajo es
+    = persona.work
+
 
     %p
     - persona = Persona.find_by_name("Mony")
+    mi nombre es:
+    = persona.name
+    y me gusta
+    = persona.hobby.name
+    y trabajo como
+    =persona.work
     %p  
     - persona = Persona.find_by_name("Cristina")
     mi nombre es:

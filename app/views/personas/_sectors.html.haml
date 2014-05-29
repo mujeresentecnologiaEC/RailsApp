@@ -78,3 +78,10 @@
     = persona.name
     y vivo al
     = persona.sector.name
+    
+    %p
+    -persona = Persona.find_by_name("Carla P")
+    mi nombre es:
+    = persona.name
+    y vivo al
+    = persona.sector.name

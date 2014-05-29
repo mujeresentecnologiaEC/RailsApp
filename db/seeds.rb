@@ -10,17 +10,18 @@ works="ITSTK"
 hobbies = Hobby.create([{ name: 'Leer'}, { name: 'Correr'}, { name: 'Bailar'}, { name: 'Pintar'}, { name: 'Cantar'}, { name: 'Mirar películas'} ])
 new_hobby = Hobby.create(name: "bailar SALSA")
 tomar = Hobby.create(name: "tomar")
+work = "Estudiante"
+
 hobby_pasear= Hobby.create(name: 'Pasear')
 
 # Asistentes!
 Persona.create(name: "Rebecca", hobby: hobbies[0], sector: norte)
 Persona.create(name: "Carla", hobby: hobbies[2], sector: valle)
 Persona.create(name: "Diana C", hobby: hobbies[0], sector: norte)
-Persona.create(name: "Mony", hobby: hobbies[3], sector: valle)
+Persona.create(name: "Mony", hobby: hobbies[3], sector: valle, work: "Estudiante")
 Persona.create(name: "Cristina", hobby: hobbies[0], sector: norte)
 Persona.create(name: "Angie", hobby: hobbies[5], sector: sur)
 Persona.create(name: "Alegria", hobby: hobbies[4], sector: sur)
-Persona.create(name: "Helene", hobby: hobbies[3], sector: valle)
 Persona.create(name: "Andrea", hobby: hobbies[5], sector: valle)
 Persona.create(name: "Cris", hobby: hobbies[4], sector: norte)
 Persona.create(name: "Adis", hobby: hobbies[2], sector: norte)
@@ -53,8 +54,9 @@ helene = Persona.find_by_name ("Hélène")
 
 helene.hobby = llegar_tarde
 
-helene.save!
+helene.work = "tecnica"
 
+helene.save!
 
 carlaP = Persona.find_by_name("Carla P")
 carlaP.hobby = hobby_pasear
