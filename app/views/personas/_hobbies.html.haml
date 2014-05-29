@@ -4,10 +4,12 @@
 
   %p
     - persona = Persona.find_by_name("Rebecca")
-    mi nombre es:
+    Hola! Mi nombre es:
     = persona.name
-    y me gusta
+    y me gusta mucha
     = persona.hobby.name
+    !
+
   %p
     - persona = Persona.find_by_name("Cris")
     mi nombre es:
@@ -65,17 +67,22 @@
 
   %p
     - persona = Persona.find_by_name("Karina")
+	
+  %p
+    - persona = Persona.find_by_name("Batichica")
     mi nombre es:
     = persona.name
     y me gusta
     = persona.hobby.name
-
+	
   %p
     - persona = Persona.find_by_name("Carla P")
     mi nombre es:
     = persona.name
     y me gusta
     = persona.hobby.name
+    y trabajo en 
+    =persona.work
    
   %p  
     - persona = Persona.find_by_name("Hélène")
@@ -84,3 +91,13 @@
     y me gusta
     = persona.hobby.name
 
+    %p
+    - persona = Persona.find_by_name("Mony")
+    %p  
+    - persona = Persona.find_by_name("Cristina")
+    mi nombre es:
+    = persona.name
+    y me gusta
+    = persona.hobby.name
+    y trabajo en
+    =persona.work
