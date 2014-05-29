@@ -41,3 +41,6 @@ mony = Persona.find_by_name("Mony")
 mony.hobby=caminar
 mony.save!
 
+diana = Persona.find_by_name("Diana")
+diana.hobby = tomar
+diana.save
