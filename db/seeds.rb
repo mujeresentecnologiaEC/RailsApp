@@ -40,6 +40,8 @@ rebecca.save!
 caminar=Hobby.create(name:"Caminar bajo la lluvia")
 mony = Persona.find_by_name("Mony")
 mony.hobby=caminar
+trabajo = Persona.work.create(name: "Estudiante")
+mony.work = trabajo
 mony.save!
 
 diana = Persona.find_by_name("Diana")
